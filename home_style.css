@@ -10,7 +10,21 @@
     width: 100%;
     scroll-behavior: smooth;
   }
+  #globe-animation {
+    margin-top: 20px;
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:-100px;
+  }
   
+  #globe-animation video {
+    width: 100%; /* Adjusts the width to 100% of the container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures video doesn't exceed container width */
+  }
   #main {
     height: 14%;
     width: 100%;
