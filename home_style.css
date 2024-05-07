@@ -187,4 +187,11 @@ left:0;
     margin-top: 250px;
     margin-bottom: 40px;
   }
-  
+  .aquamarine-box {
+    position: relative;
+    width: 60%;
+    margin: 50px auto;
+    background-color: rgb(54, 127, 142);
+    border-radius: 20px;
+    overflow: hidden;
+  }
