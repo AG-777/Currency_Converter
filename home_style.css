@@ -305,3 +305,23 @@ left:0;
   clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 50%);
   z-index: -1;
 }
+.aquamarine-box {
+  margin-top: 500px;
+}
+.content {
+  padding: 20px;
+  text-align: center;
+  color: rgb(169, 248, 255);
+  z-index: 1;
+  align-content: center;
+  margin: 10%;
+}
+
+.aquamarine-box h1 {
+  font-size: 4.2em;
+}
+
+.aquamarine-box p {
+  font-size: 2.2em;
+  line-height: 1.5;
+}
