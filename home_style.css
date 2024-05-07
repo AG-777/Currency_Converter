@@ -430,3 +430,17 @@ footer {
     font-size: 14px;
   }
 }
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .aquamarine-box {
+    width: 70%; /* Adjust width for tablets */
+  }
+  .aquamarine-box .content h1 {
+    font-size: 38px; /* Adjust h1 font size for tablets */
+    margin-bottom: 4%;
+  }
+  .aquamarine-box .content p {
+    font-size: 22px; /* Adjust paragraph font size for tablets */
+  }
+}
+
