@@ -443,4 +443,16 @@ footer {
     font-size: 22px; /* Adjust paragraph font size for tablets */
   }
 }
-
+/* For laptops and larger screens */
+@media (min-width: 1024px) {
+  .aquamarine-box {
+    width: 70%; /* Keep the original width for laptops */
+  }
+  .aquamarine-box .content h1 {
+    font-size: 50px; /* Adjust h1 font size for laptops */
+    margin-bottom: 4%;
+  }
+  .aquamarine-box .content p {
+    font-size: 24px; /* Adjust paragraph font size for laptops */
+  }
+}
