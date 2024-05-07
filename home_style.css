@@ -325,3 +325,15 @@ left:0;
   font-size: 2.2em;
   line-height: 1.5;
 }
+footer {
+  position: absolute; /* Fix the footer position */
+  bottom: 1; /* Stick it to the bottom */
+  background-color: #333;
+  opacity: 0.88;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
