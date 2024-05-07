@@ -383,3 +383,14 @@ footer {
   display: block;
   box-sizing: border-box;
 }
+@media (min-width: 768px) {
+  #globe-animation video {
+    width: 80%; /* Adjust video width for tablets */
+  }
+}
+
+@media (min-width: 900px) {
+  #globe-animation video {
+    width: 55%; /* Adjust video width for laptops */
+  }
+}
