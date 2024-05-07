@@ -514,4 +514,8 @@ footer {
     height: 80px;
     margin: 5px; /* Adjust margin for smaller screens */
   }
+  .currency-label {
+    font-size: 10px; /* Adjust font size for smaller screens */
+    padding: 3px; /* Adjust padding for smaller screens */
+  }
 }
