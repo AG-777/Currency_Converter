@@ -285,6 +285,7 @@ left:0;
   border-radius: 8px;
   transform: translate(-50%, -50%);
 }
+
 .faq-time > h1 {
   color: rgb(14, 15, 12);
   font-family: "Wise Sans", "Inter", sans-serif;
@@ -293,6 +294,7 @@ left:0;
   font-size: clamp(2rem, calc(0.54545rem + 7.27273vw), 2.5rem);
   text-align: center;
 }
+
 .background-image {
   position: absolute;
   top: 0;
@@ -305,9 +307,11 @@ left:0;
   clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 50%);
   z-index: -1;
 }
+
 .aquamarine-box {
   margin-top: 500px;
 }
+
 .content {
   padding: 20px;
   text-align: center;
