@@ -456,3 +456,52 @@ footer {
     font-size: 24px; /* Adjust paragraph font size for laptops */
 }
 }
+@media screen and (max-width: 777px) {
+  #nav {
+    padding: 20px; /* Increase padding for better touch usability */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align items to the center horizontally */
+    height: auto; /* Allow the navbar to grow with its content */
+  }
+  #nav > h1 {
+    font-size: 20px;/* Add space between h1 and menu items */
+    text-align: center; /* Center align the h1 text */
+  }
+
+  #nav #part2 {
+    flex-direction: row; /* Stack menu items vertically */
+    align-items: center; /* Center align the menu items */
+  }
+
+  #nav #part2 a {
+    margin:6px;
+    font-size: 14px;
+    text-align:left;
+  }
+
+  #nav #part2 a:nth-last-child(1) {
+    padding: 5px 12px;
+    color:white;
+    border:1px solid rgb(0, 0, 0);
+  }
+  #nav #part2 a:nth-last-child(1):hover {
+    color:black;
+  }
+
+  #nav #part2 a:nth-last-child(1) #blue {
+    left: auto; /* Reset left position */
+    width: auto; /* Adjust width for the content */
+    right: 20px; /* Position the blue element to the right */
+    top: 50%; /* Move it to the middle vertically */
+    transform: translateY(-50%); /* Center it vertically */
+    width: 100%;
+    left: -115px;
+    background-color: aquamarine;
+  }
+
+  #nav #part2 a:nth-last-child(1) h5 {
+    font-weight: 100;
+    position: relative;
+    z-index: 99;
+  }
+}
