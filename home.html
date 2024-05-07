@@ -176,6 +176,23 @@
             </div>
         </div>
     </section>
+    <script>
+        function toggleAnswer(index) {
+          const answer = document.getElementById(`answer${index}`);
+          const arrow = document.querySelectorAll('.faq-item .faq-question .arrow');
+      
+          // Toggle display of the answer element
+          if (answer.style.display === "block") {
+              answer.style.display = "none";
+              arrow[index - 1].classList.remove('opened'); // Remove 'opened' class when closing
+              arrow[index - 1].innerHTML = '<i class="fas fa-chevron-down"></i>'; // Set arrow to downward when closing
+          } else {
+              answer.style.display = "block";
+              arrow[index - 1].classList.add('opened'); // Add 'opened' class when opening
+              arrow[index - 1].innerHTML = '<i class="fas fa-chevron-up"></i>'; // Set arrow to upward when opening
+          }
+      }
+       </script>
 </body>
 
 </html>
