@@ -97,6 +97,23 @@
   #nav #part2 a:nth-last-child(1):hover #blue {
 left:0;
 }
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  margin-left: 5%;
+  width: 90%;
+  margin-bottom: 10px;
+  padding-top: 35px;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+.typed{
+  display: inline-block;
+  width:90%;
+}
+
 .currency-container {
     display: flex;
     flex-wrap: wrap;
