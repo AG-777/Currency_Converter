@@ -23,7 +23,7 @@
   #globe-animation video {
     width: 100%; /* Adjusts the width to 100% of the container */
     height: auto; /* Maintains aspect ratio */
-    max-width: 100%; /* Ensures video doesn't exceed container width */
+    max-width: 100%; /* Ensures video doesn't exceed containerwidth*/
   }
   #main {
     height: 14%;
@@ -95,8 +95,8 @@
     z-index: 99;
   }
   #nav #part2 a:nth-last-child(1):hover #blue {
-    left: 0;
-  }
+left:0;
+}
 .currency-container {
     display: flex;
     flex-wrap: wrap;
@@ -134,7 +134,7 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    font-weight: bold;
+    font-weight:bold;
   }
   .arrow {
     display: inline-block;
@@ -153,8 +153,7 @@
     justify-content: center;
     padding: 20px;
   }
-  .top-currencies{
-  }
+  
   .top-currencies p {
     font-size: 36px;
     font-weight: 700;
@@ -173,5 +172,19 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .currency-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+  }
+  .top-currencies {
+    margin-top: 250px;
+    margin-bottom: 40px;
   }
   
