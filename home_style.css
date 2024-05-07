@@ -509,5 +509,9 @@ footer {
   .currency-container {
     padding: 10px; /* Adjust padding for smaller screens */
   }
-  
+  .currency {
+    width: 80px; /* Reduce currency size for smaller screens */
+    height: 80px;
+    margin: 5px; /* Adjust margin for smaller screens */
+  }
 }
