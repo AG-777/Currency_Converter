@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border: none;
+    outline: none;
+  }
+  .wrapper {
+    width: 90%;
+    max-width: 25em;
+    background-color: #ffffff;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 2em;
+    border:1px groove rgba(122, 122, 122, 0.712);
+    box-shadow:0 0 4px rgba(122, 122, 122, 0.712);
+    border-radius: 0.8em;
+    margin-bottom:120px;
+  
+  }
+  .app-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .app-icon {
+    width: 9.37em;
+  }
+  .swap-img{
+    width: 3em;
+  }
+  .app-title {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+  }
+  input#amount {
+    font-weight: 400;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #02002c;
+    color: #7a789d;
+    margin-bottom: 2em;
+    padding: 0.5em;
+  }
+  input#amount:focus {
+    color: #007BFF;
+    border-color: #007BFF;
+  }
+  .dropdowns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+  }
+  .convert{
+    display:flex;
+    flex-direction: column;
+  }
+  select {
+    width: 100%;
+    padding: 0.6em;
+    font-size: 1em;
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%, center;
+    background-size: 20px 20px;
+    background-color: #d6d6d641;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+  }
+  select option {
+    background-color: #ffffff;
+    color: #02002c;
+  }
+  button#convert-button {
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px;
+      cursor: pointer;
+      font-size: large;
+  }
+  button#swap-button{
+    width:0px;
+    cursor: pointer;
+    margin-right:40px;
+    
+  }
+  .swap-img:hover {
+    border-radius:50%;
+    opacity: 0.78;
+    box-shadow: 0 0 0.548px rgb(146, 145, 145);
+  }
+  .swap-img:active {
+    border-radius:50%;
+    opacity:1;
+    box-shadow: 0 0 1px #025dbe;
+  }
+  #convert-button:hover {
+    background-color: #0564cae5;
+    box-shadow: 0 0 10px #00000033;
+    transition:background-color 0.3s;
+  }
+  #result {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 1em;
+    color: #02002c;
+    background-color: #dadada83;
+    border-radius: 10px;
+    padding: 0.4em;
+  }
