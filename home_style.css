@@ -1,201 +1,280 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-    scroll-behavior: smooth;
-  }
-  #globe-animation {
-    margin-top: 20px;
-    margin-left: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:-100px;
-  }
-  
-  #globe-animation video {
-    width: 100%; /* Adjusts the width to 100% of the container */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 100%; /* Ensures video doesn't exceed containerwidth*/
-  }
-  #main {
-    height: 14%;
-    width: 100%;
-    background-color: white;
-    position: relative;
-  }
-  #nav {
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: rgb(67, 67, 67);
-    display: flex;
-    padding: 0 40px;
-    align-items: center;
-    justify-content: space-between;
-    background-size: cover;
-    background-blend-mode: darken;
-    z-index: 100;
-  }
-  #nav > h1 {
-    font-size: 31px;
-    font-weight: 100;
-    color: rgba(255, 255, 255, 0.808);
-  }
-  #nav #part2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #nav #part2 a {
-    text-decoration: none;
-    color: white;
-    font-family: "Ubuntu", sans-serif;
-    margin: 15px;
-  }
-  #nav #part2 a:hover {
-    color: rgb(197, 194, 194);
-  }
-  #nav #part2 a:nth-last-child(1) {
-    padding: 7px 18px;
-    font-size: 19px;
-    font-weight: bolder;
-    border-radius: 55px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #000;
-    color: white;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.329);
-  }
-  #nav #part2 a:nth-last-child(1):hover {
-    color:black;
-  }
-  #nav #part2 a:nth-last-child(1) #blue {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    top: 0;
-    left: -115px;
-    background-color: aquamarine;
-    color: black;
-    height: 100%;
-    transition: left 0.4s ease;
-  }
-  #nav #part2 a:nth-last-child(1) h5 {
-    font-weight: 100;
-    position: relative;
-    z-index: 99;
-  }
-  #nav #part2 a:nth-last-child(1):hover #blue {
-left:0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.currency-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .currency {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    transition: all 0.3s ease;
-  }
-  
-  .currency:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-  }
-  
-  .currency img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .currency:hover img {
-    transform: scale(1.2); /* Zoom effect on image hover */
-  }
-  
-  .currency-label {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight:bold;
-  }
-  .arrow {
-    display: inline-block;
-    transition: transform 0.4s ease;
-    vertical-align: middle;
-    margin-left: 10px; /* Adjust margin as needed */
-    transition: transform 0.3s ease;
-  }
-  
-  .opened .arrow {
-    transform: rotate(180deg);
-  }
-  .currency-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .top-currencies p {
-    font-size: 36px;
-    font-weight: 700;
-    
-  }
-  .currency {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 10px;
-    position: relative;
-  }
-  
-  .currency img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .currency-label {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+#globe-animation {
+  margin-top: 20px;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -100px;
+}
+
+#globe-animation video {
+  width: 100%;
+  /* Adjusts the width to 100% of the container */
+  height: auto;
+  /* Maintains aspect ratio */
+  max-width: 100%;
+  /* Ensures video doesn't exceed containerwidth*/
+}
+
+#main {
+  height: 14%;
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+#nav {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgb(67, 67, 67);
+  display: flex;
+  padding: 0 40px;
+  align-items: center;
+  justify-content: space-between;
+  background-size: cover;
+  background-blend-mode: darken;
+  z-index: 100;
+}
+
+#nav>h1 {
+  font-size: 31px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.808);
+}
+
+#nav #part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav #part2 a {
+  text-decoration: none;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  margin: 15px;
+}
+
+#nav #part2 a:hover {
+  color: rgb(197, 194, 194);
+}
+
+#nav #part2 a:nth-last-child(1) {
+  padding: 7px 18px;
+  font-size: 19px;
+  font-weight: bolder;
+  border-radius: 55px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #000;
+  color: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.329);
+}
+
+#nav #part2 a:nth-last-child(1):hover {
+  color: black;
+}
+
+#nav #part2 a:nth-last-child(1) #blue {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  left: -115px;
+  background-color: aquamarine;
+  color: black;
+  height: 100%;
+  transition: left 0.4s ease;
+}
+
+#nav #part2 a:nth-last-child(1) h5 {
+  font-weight: 100;
+  position: relative;
+  z-index: 99;
+}
+
+#nav #part2 a:nth-last-child(1):hover #blue {
+  left: 0;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  margin-left: 5%;
+  width: 90%;
+  margin-bottom: 10px;
+  padding-top: 35px;
+  transition: all 0.3s ease;
+  /* Smooth transition */
+}
+
+.typed {
+  display: inline-block;
+  width: 90%;
+}
+
+@media (max-width: 777px) {
+  #content {
+    font-size: 5vw;
+    /* Adjust font size for mobile using viewport width units */
+    font-weight: 600;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px;
-    font-size: 12px;
+    /* Center text on mobile */
   }
-  .top-currencies {
-    margin-top: 250px;
-    margin-bottom: 40px;
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #content {
+    font-size: 4vw;
+    /* Adjust font size for tablets using viewport width units */
+    text-align: center;
+    /* Center text on tablets */
+    font-weight: 600;
   }
-  .aquamarine-box {
-    position: relative;
-    width: 60%;
-    margin: 50px auto;
-    background-color: rgb(54, 127, 142);
-    border-radius: 20px;
-    overflow: hidden;
+}
+
+/* For laptops and larger screens */
+@media (min-width: 1024px) {
+  #content {
+    font-size: 2.4em;
+    /* Keep the original font size for laptops */
+    font-weight: 500;
+    text-align: center;
+    /* Center text on larger screens */
   }
-  
+}
+
+.currency-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.currency {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Shadow effect */
+  transition: all 0.3s ease;
+}
+
+.currency:hover {
+  transform: scale(1.1);
+  /* Zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Shadow effect on hover */
+}
+
+.currency img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.currency:hover img {
+  transform: scale(1.2);
+  /* Zoom effect on image hover */
+}
+
+.currency-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  vertical-align: middle;
+  margin-left: 10px;
+  /* Adjust margin as needed */
+  transition: transform 0.3s ease;
+}
+
+.opened .arrow {
+  transform: rotate(180deg);
+}
+
+.currency-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.top-currencies p {
+  font-size: 36px;
+  font-weight: 700;
+
+}
+
+.currency {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px;
+  position: relative;
+}
+
+.currency img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.currency-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.top-currencies {
+  margin-top: 250px;
+  margin-bottom: 40px;
+}
+
+.aquamarine-box {
+  position: relative;
+  width: 60%;
+  margin: 50px auto;
+  background-color: rgb(54, 127, 142);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .faq-time {
   font-family: Arial, sans-serif;
   font-size: larger;
@@ -212,7 +291,8 @@ left:0;
 }
 
 .faq-item {
-  position: relative; /* Set position to relative */
+  position: relative;
+  /* Set position to relative */
   margin-bottom: 20px;
   overflow: hidden;
   border-radius: 8px;
@@ -250,6 +330,7 @@ left:0;
   transform: scale(1.02);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .faq-answer:hover .faq-question {
   background: #f5f5f5;
 }
@@ -273,9 +354,11 @@ left:0;
   top: 50%;
   left: 50%;
   background: rgba(0, 0, 0, 0.1);
-  z-index: -1; /* Set a lower z-index */
+  z-index: -1;
+  /* Set a lower z-index */
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-    border-radius 0.3s ease-in-out, transform 0.3s ease-in-out; /* Include transform in transition */
+    border-radius 0.3s ease-in-out, transform 0.3s ease-in-out;
+  /* Include transform in transition */
 }
 
 .faq-question:hover::before,
@@ -285,11 +368,242 @@ left:0;
   border-radius: 8px;
   transform: translate(-50%, -50%);
 }
-.faq-time > h1 {
+
+.faq-time>h1 {
   color: rgb(14, 15, 12);
   font-family: "Wise Sans", "Inter", sans-serif;
   font-weight: 900;
   padding: 20px;
   font-size: clamp(2rem, calc(0.54545rem + 7.27273vw), 2.5rem);
   text-align: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("your-image-url.jpg");
+  /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 50%);
+  z-index: -1;
+}
+
+.aquamarine-box {
+  margin-top: 500px;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  color: rgb(169, 248, 255);
+  z-index: 1;
+  align-content: center;
+  margin: 10%;
+}
+
+.aquamarine-box h1 {
+  font-size: 4.2em;
+}
+
+.aquamarine-box p {
+  font-size: 2.2em;
+  line-height: 1.5;
+}
+
+footer {
+  position: absolute;
+  /* Fix the footer position */
+  bottom: 1;
+  /* Stick it to the bottom */
+  background-color: #333;
+  opacity: 0.88;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  #globe-animation video {
+    width: 80%;
+    /* Adjust video width for tablets */
+  }
+}
+
+@media (min-width: 900px) {
+  #globe-animation video {
+    width: 55%;
+    /* Adjust video width for laptops */
+  }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 777px) {
+  footer {
+    font-size: 12px;
+    /* Adjust font size for smaller screens*/
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .faq-time {
+    width: 90%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .faq-time {
+    width: 90%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .aquamarine-box {
+    width: 70%;
+    /* Adjust width for tablets */
+  }
+
+  .aquamarine-box .content h1 {
+    font-size: 38px;
+    /* Adjust h1 font size for tablets */
+    margin-bottom: 4%;
+  }
+
+  .aquamarine-box .content p {
+    font-size: 22px;
+    /* Adjust paragraph font size for tablets */
+  }
+}
+
+/* For laptops and larger screens */
+@media (min-width: 1024px) {
+  .aquamarine-box {
+    width: 70%;
+    /* Keep the original width for laptops */
+  }
+
+  .aquamarine-box .content h1 {
+    font-size: 50px;
+    /* Adjust h1 font size for laptops */
+    margin-bottom: 4%;
+  }
+
+  .aquamarine-box .content p {
+    font-size: 24px;
+    /* Adjust paragraph font size for laptops*/
+  }
+}
+
+@media screen and (max-width: 777px) {
+  #nav {
+    padding: 20px;
+    /* Increase padding for better touch usability */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Align items to the center horizontally */
+    height: auto;
+    /* Allow the navbar to grow with its content */
+  }
+
+  #nav>h1 {
+    font-size: 20px;
+    /* Add space between h1 and menu items */
+    text-align: center;
+    /* Center align the h1 text */
+  }
+
+  #nav #part2 {
+    flex-direction: row;
+    /* Stack menu items vertically */
+    align-items: center;
+    /* Center align the menu items */
+  }
+
+  #nav #part2 a {
+    margin: 6px;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  #nav #part2 a:nth-last-child(1) {
+    padding: 5px 12px;
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+  }
+
+  #nav #part2 a:nth-last-child(1):hover {
+    color: black;
+  }
+
+  #nav #part2 a:nth-last-child(1) #blue {
+    left: auto;
+    /* Reset left position */
+    width: auto;
+    /* Adjust width for the content */
+    right: 20px;
+    /* Position the blue element to the right */
+    top: 50%;
+    /* Move it to the middle vertically */
+    transform: translateY(-50%);
+    /* Center it vertically */
+    width: 100%;
+    left: -115px;
+    background-color: aquamarine;
+  }
+
+  #nav #part2 a:nth-last-child(1) h5 {
+    font-weight: 100;
+    position: relative;
+    z-index: 99;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .currency-container {
+    padding: 10px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .currency {
+    width: 80px;
+    /* Reduce currency size for smaller screens */
+    height: 80px;
+    margin: 5px;
+    /* Adjust margin for smaller screens */
+  }
+
+  .currency-label {
+    font-size: 10px;
+    /* Adjust font size for smaller screens */
+    padding: 3px;
+    /* Adjust padding for smaller screens */
+  }
 }
