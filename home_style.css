@@ -394,3 +394,9 @@ footer {
     width: 55%; /* Adjust video width for laptops */
   }
 }
+/* Media query for responsiveness */
+@media screen and (max-width: 777px) {
+  footer {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+}
