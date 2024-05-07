@@ -243,3 +243,13 @@ left:0;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.faq-question:hover,
+.faq-answer:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.faq-answer:hover .faq-question {
+  background: #f5f5f5;
+}
