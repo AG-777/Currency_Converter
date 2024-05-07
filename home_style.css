@@ -136,3 +136,15 @@
     transform: translateX(-50%);
     font-weight: bold;
   }
+  .arrow {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    vertical-align: middle;
+    margin-left: 10px; /* Adjust margin as needed */
+    transition: transform 0.3s ease;
+  }
+  
+  .opened .arrow {
+    transform: rotate(180deg);
+  }
+    
