@@ -394,3 +394,65 @@ footer {
     width: 55%; /* Adjust video width for laptops */
   }
 }
+/* Media query for responsiveness */
+@media screen and (max-width: 777px) {
+  footer {
+    font-size: 12px; /* Adjust font size for smaller screens */
+}
+}
+@media screen and (max-width: 777px) {
+  .faq-time {
+    width: 90%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+}
+}
+@media screen and (max-width: 777px) {
+  .faq-time {
+    width: 90%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+}
+}
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .aquamarine-box {
+    width: 70%; /* Adjust width for tablets */
+  }
+  .aquamarine-box .content h1 {
+    font-size: 38px; /* Adjust h1 font size for tablets */
+    margin-bottom: 4%;
+  }
+  .aquamarine-box .content p {
+    font-size: 22px; /* Adjust paragraph font size for tablets */
+  }
+}
+/* For laptops and larger screens */
+@media (min-width: 1024px) {
+  .aquamarine-box {
+    width: 70%; /* Keep the original width for laptops */
+  }
+  .aquamarine-box .content h1 {
+    font-size: 50px; /* Adjust h1 font size for laptops */
+    margin-bottom: 4%;
+  }
+  .aquamarine-box .content p {
+    font-size: 24px; /* Adjust paragraph font size for laptops */
+}
+}
