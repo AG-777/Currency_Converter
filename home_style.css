@@ -285,6 +285,7 @@ left:0;
   border-radius: 8px;
   transform: translate(-50%, -50%);
 }
+
 .faq-time > h1 {
   color: rgb(14, 15, 12);
   font-family: "Wise Sans", "Inter", sans-serif;
@@ -292,4 +293,52 @@ left:0;
   padding: 20px;
   font-size: clamp(2rem, calc(0.54545rem + 7.27273vw), 2.5rem);
   text-align: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("your-image-url.jpg"); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 50%);
+  z-index: -1;
+}
+
+.aquamarine-box {
+  margin-top: 500px;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  color: rgb(169, 248, 255);
+  z-index: 1;
+  align-content: center;
+  margin: 10%;
+}
+
+.aquamarine-box h1 {
+  font-size: 4.2em;
+}
+
+.aquamarine-box p {
+  font-size: 2.2em;
+  line-height: 1.5;
+}
+
+footer {
+  position: absolute; /* Fix the footer position */
+  bottom: 1; /* Stick it to the bottom */
+  background-color: #333;
+  opacity: 0.88;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
 }
