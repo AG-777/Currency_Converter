@@ -195,3 +195,101 @@ left:0;
     border-radius: 20px;
     overflow: hidden;
   }
+  
+.faq-time {
+  font-family: Arial, sans-serif;
+  font-size: larger;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.faq-container {
+  margin: 50px auto;
+}
+
+.faq-item {
+  position: relative; /* Set position to relative */
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.faq-question {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.faq-answer {
+  padding: 22px;
+  display: none;
+  font-size: 18px;
+  margin-top: -15px;
+  z-index: 0;
+  position: relative;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.faq-question:hover,
+.faq-answer:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.faq-answer:hover .faq-question {
+  background: #f5f5f5;
+}
+
+.faq-question.active {
+  background-color: #f5f5f5;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-answer.active {
+  display: block;
+  background-color: #ffffff;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1; /* Set a lower z-index */
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out, transform 0.3s ease-in-out; /* Include transform in transition */
+}
+
+.faq-question:hover::before,
+.faq-answer:hover::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+}
+.faq-time > h1 {
+  color: rgb(14, 15, 12);
+  font-family: "Wise Sans", "Inter", sans-serif;
+  font-weight: 900;
+  padding: 20px;
+  font-size: clamp(2rem, calc(0.54545rem + 7.27273vw), 2.5rem);
+  text-align: center;
+}
