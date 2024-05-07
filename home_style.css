@@ -234,7 +234,7 @@ left:0;
     margin: 50px auto;
     background-color: rgb(54, 127, 142);
     border-radius: 20px;
-    overflow: hidden;
+    overflow:hidden;
   }
   
 .faq-time {
@@ -368,7 +368,7 @@ left:0;
 
 .aquamarine-box p {
   font-size: 2.2em;
-  line-height: 1.5;
+  line-height:1.5;
 }
 
 footer {
@@ -381,7 +381,7 @@ footer {
   text-align: center;
   width: 100%;
   display: block;
-  box-sizing: border-box;
+  box-sizing:border-box;
 }
 @media (min-width: 768px) {
   #globe-animation video {
@@ -397,7 +397,7 @@ footer {
 /* Media query for responsiveness */
 @media screen and (max-width: 777px) {
   footer {
-    font-size: 12px; /* Adjust font size for smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens*/
 }
 }
 @media screen and (max-width: 777px) {
@@ -412,7 +412,7 @@ footer {
   }
 
   .faq-answer {
-    font-size: 14px;
+    font-size:14px;
 }
 }
 @media screen and (max-width: 777px) {
@@ -427,7 +427,7 @@ footer {
   }
 
   .faq-answer {
-    font-size: 14px;
+    font-size:14px;
 }
 }
 /* For tablets */
@@ -453,7 +453,7 @@ footer {
     margin-bottom: 4%;
   }
   .aquamarine-box .content p {
-    font-size: 24px; /* Adjust paragraph font size for laptops */
+    font-size: 24px; /* Adjust paragraph font size for laptops*/
 }
 }
 @media screen and (max-width: 777px) {
@@ -502,8 +502,8 @@ footer {
   #nav #part2 a:nth-last-child(1) h5 {
     font-weight: 100;
     position: relative;
-    z-index: 99;
-  }
+    z-index:99;
+}
 }
 @media screen and (max-width: 767px) {
   .currency-container {
