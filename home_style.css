@@ -113,7 +113,31 @@ left:0;
   display: inline-block;
   width:90%;
 }
+@media (max-width: 777px) {
+  #content {
+    font-size: 5vw; /* Adjust font size for mobile using viewport width units */
+    font-weight:600;
+    text-align: center; /* Center text on mobile */
+  }
+}
 
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #content {
+    font-size: 4vw; /* Adjust font size for tablets using viewport width units */
+    text-align: center; /* Center text on tablets */
+    font-weight:600;
+  }
+}
+
+/* For laptops and larger screens */
+@media (min-width: 1024px) {
+  #content {
+    font-size: 2.4em; /* Keep the original font size for laptops */
+    font-weight:500;
+    text-align: center; /* Center text on larger screens */
+  }
+}
 .currency-container {
     display: flex;
     flex-wrap: wrap;
