@@ -505,3 +505,9 @@ footer {
     z-index: 99;
   }
 }
+@media screen and (max-width: 767px) {
+  .currency-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  
+}
