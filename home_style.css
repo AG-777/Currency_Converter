@@ -398,7 +398,7 @@ footer {
 @media screen and (max-width: 777px) {
   footer {
     font-size: 12px; /* Adjust font size for smaller screens */
-  }
+}
 }
 @media screen and (max-width: 777px) {
   .faq-time {
@@ -413,7 +413,7 @@ footer {
 
   .faq-answer {
     font-size: 14px;
-  }
+}
 }
 @media screen and (max-width: 777px) {
   .faq-time {
@@ -428,7 +428,7 @@ footer {
 
   .faq-answer {
     font-size: 14px;
-  }
+}
 }
 /* For tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -454,5 +454,5 @@ footer {
   }
   .aquamarine-box .content p {
     font-size: 24px; /* Adjust paragraph font size for laptops */
-  }
+}
 }
