@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10"></link></head>
+    <body>
+        <div class="formBox">
+            <h2>Contact Us</h2>
+            <p>You will hear from us at the earliest!</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <i class="fa fa-user icon" id="nameIcon"></i>
+                    <input type="text" placeholder="     Full Name" name="name" id="nameInput" oninput="handleInput('nameInput', 'nameIcon')">
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-envelope icon" id="emailIcon"></i>
+                    <input type="email" name="mail" id="mailInput" placeholder="     Email" oninput="handleInput('mailInput', 'emailIcon')">
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <i class="fa-solid fa-phone icon" id="phoneIcon"></i>
+                    <input type="tel" name="phone" id="phoneInput" placeholder="     Phone" min="100000" max="9999999999"
+                        oninput="handleInput('phoneInput', 'phoneIcon')">
+                </div>
+                <div class="form-group">
+                    <textarea name="query" id="query" cols="30" rows="5"
+                        placeholder="Any comment or your query"></textarea>
+                </div>
+                <div class="submitBtn">
+                    <button type="button" onclick="showMessage()">Send</button>
+                </div>
+            </form>
+            <p class="extra">You can also contact us at 181-1711-322</p>
+        </div>
+    </body>
+
+    </html>
