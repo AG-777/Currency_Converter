@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10"></link>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://wallpaperaccess.com/full/802645.jpg') repeat;
+            background-size: cover;
+        }
+
+        .formBox {
+            max-width: 600px;
+            margin: 50px auto;
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .formBox:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #3498db;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="formBox">
+            <h2>Contact Us</h2>
+            <p>You will hear from us at the earliest!</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <i class="fa fa-user icon" id="nameIcon"></i>
+                    <input type="text" placeholder="     Full Name" name="name" id="nameInput" oninput="handleInput('nameInput', 'nameIcon')">
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-envelope icon" id="emailIcon"></i>
+                    <input type="email" name="mail" id="mailInput" placeholder="     Email" oninput="handleInput('mailInput', 'emailIcon')">
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <i class="fa-solid fa-phone icon" id="phoneIcon"></i>
+                    <input type="tel" name="phone" id="phoneInput" placeholder="     Phone" min="100000" max="9999999999"
+                        oninput="handleInput('phoneInput', 'phoneIcon')">
+                </div>
+                <div class="form-group">
+                    <textarea name="query" id="query" cols="30" rows="5"
+                        placeholder="Any comment or your query"></textarea>
+                </div>
+                <div class="submitBtn">
+                    <button type="button" onclick="showMessage()">Send</button>
+                </div>
+            </form>
+            <p class="extra">You can also contact us at 181-1711-322</p>
+        </div>
+    </body>
+
+    </html>
