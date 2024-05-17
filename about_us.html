@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CoinForge Team</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+          background-color:rgba(0, 0, 0, 0.726) ;
+            color: #ffffffdc;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color:rgba(255, 255, 255, 0.279);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+            font-size:28px;
+            text-shadow: 0 0 2px rgba(97, 94, 94, 0.616);
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 123, 255, 0.2);
+            z-index: -1;
+            border-radius: 8px;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .team-member:hover::before {
+            opacity: 1;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            margin-right: 20px;
+            transition: transform 0.3s ease-in-out;
+            width: 100px; /* Adjust the image size */
+        }
+
+        .team-member:hover img {
+            transform: scale(1.2);
+        }
+
+        .team-member div {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .team-member:hover div {
+            opacity: 1;
+        }
+
+        h3 {
+            color: #333;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .team-member:hover h3 {
+            color: #007BFF;
+        }
+
+        p.team-info {
+            color: #555;
+            line-height: 1.6;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .team-member:hover p.team-info {
+            color: #333;
+        }
+
+        .team-member::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%; /* Position the tooltip above the team member */
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 5px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .team-member:hover::after {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 0.8em;
+            }
+
+            section {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+
+            .team-member {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .team-member img {
+                width: 80px;
+                margin-bottom: 10px;
+            }
+
+            .team-member div {
+                margin: 0;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            footer {
+                padding: 0.5em;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CoinForge Team</h1>
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <p>
+            Welcome to CoinForge Team, your reliable companion for all your currency conversion needs.
+        </p>
+        <p>
+            At CoinForge Team, we understand that in today’s global economy, dealing with different currencies is a common occurrence. Whether you’re traveling, investing in foreign markets, or simply shopping online, we’re here to make currency conversion as simple and seamless as possible.
+        </p>
+        
+        <div class="team-member" title="Passionate about UX design and making currency conversion seamless for users. Connect with me!">
+            <img src="team_member1.jpeg" alt="Team Member 1">
+            <div>
+                <h3>Anvesha Jagga</h3>
+                <p class="team-info">Passionate about UX design and making currency conversion seamless for users. Connect with me!</p>
+            </div>
+        </div>
+
+        <div class="team-member" title="Tech enthusiast and problem solver. Excited to bring innovative solutions to currency conversion challenges.">
+            <img src="team_member2.png" alt="Team Member 2">
+            <div>
+                <h3>Apurav Gautam</h3>
+                <p class="team-info">Tech enthusiast and problem solver. Excited to bring innovative solutions to currency conversion challenges.</p>
+            </div>
+        </div>
+
+        <div class="team-member" title="Data-driven thinker with a focus on accuracy in currency conversion algorithms. Let's make numbers speak!">
+            <img src="team_member3.jpeg" alt="Team Member 3">
+            <div>
+                <h3>Archit Kapoor</h3>
+                <p class="team-info">Data-driven thinker with a focus on accuracy in currency conversion algorithms. Let's make numbers speak!</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+</body>
+</html>
