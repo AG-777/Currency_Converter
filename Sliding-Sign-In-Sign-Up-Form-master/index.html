@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Sign in & Sign up Form</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <div class="container">
+  
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="http://127.0.0.1:5500/Project_FEE/home.html" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/ChitkaraU/" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/gautam_apu27506" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="http://127.0.0.1:5500/Project_FEE/home.html" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/apurav-gautam-b19b9428b/" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="http://127.0.0.1:5500/Project_FEE/Sliding-Sign-In-Sign-Up-Form-master/index.html" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/ChitkaraU/" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+                <i data-feather="circle"></i>
+              </a>
+              <a href="https://twitter.com/gautam_apu27506" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="http://127.0.0.1:5500/Project_FEE/home.html" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/apurav-gautam-b19b9428b/" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Register to our website
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="img/log.png" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="img/register.png" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sign_in_btn = document.querySelector("#sign-in-btn");
+      const sign_up_btn = document.querySelector("#sign-up-btn");
+      const container = document.querySelector(".container");
+
+      sign_up_btn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+      });
+
+      sign_in_btn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+      });
+
+    </script>
+    
+    <script>
+      const signInForm = document.querySelector(".sign-in-form");
+    
+      signInForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        const username = this.querySelector('input[type="text"]').value;
+        const password = this.querySelector('input[type="password"]').value;
+    
+        if (username.trim() === '' || password.trim() === '') {
+          // Show SweetAlert2 alert for empty fields
+          Swal.fire({
+            title: 'Error!',
+            text: 'Please fill in all fields.',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          });
+        } else {
+          // Show loading screen using SweetAlert2
+          Swal.fire({
+            title: 'Logging in...',
+            html: 'Please wait while we process your request.',
+            allowOutsideClick: false,
+            onBeforeOpen: () => {
+              Swal.showLoading();
+            }
+          });
+    
+          // Mock login check, assuming successful login
+          // Replace this with your actual login logic, typically an API call or authentication check
+          // Here, for demonstration, we'll simulate a successful login after 1 second
+          setTimeout(() => {
+            // Close loading screen
+            Swal.close();
+    
+            // Show success message
+            Swal.fire({
+              title: 'Success!',
+              text: 'Logged in successfully!',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                // Redirect the user to a specific website
+                window.location.href = "http://127.0.0.1:5500/Project_FEE/home.html"; // Replace with your desired website URL
+              }
+            });
+    
+            // Clear form fields after successful login
+            this.reset(); // Reset the sign-in form
+          }, 1000);
+        }
+      });
+    
+      const signUpForm = document.querySelector(".sign-up-form");
+    
+      signUpForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        const username = this.querySelector('input[type="text"]').value;
+        const email = this.querySelector('input[type="email"]').value;
+        const password = this.querySelector('input[type="password"]').value;
+    
+        if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
+          // Show SweetAlert2 alert for empty fields
+          Swal.fire({
+            title: 'Error!',
+            text: 'Please fill in all fields.',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          });
+        } else {
+          // Show loading screen using SweetAlert2
+          Swal.fire({
+            title: 'Signing up...',
+            html: 'Please wait while we process your request.',
+            allowOutsideClick: false,
+            onBeforeOpen: () => {
+              Swal.showLoading();
+            }
+          });
+    
+          // Mock signup process, assuming successful signup
+          // Replace this with your actual signup logic, typically an API call or database insertion
+          // Here, for demonstration, we'll simulate a successful signup after 1 second
+          setTimeout(() => {
+            // Close loading screen
+            Swal.close();
+    
+            // Show success message
+            Swal.fire({
+              title: 'Success!',
+              text: 'Signed up successfully!',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
+    
+            // Clear form fields after successful signup
+            this.reset(); // Reset the sign-up form
+          }, 1000);
+        }
+      });
+    </script>
+    
+    
+
+    
+  </body>
+</html>
