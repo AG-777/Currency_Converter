@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Add a light background color */
+        }
+        header {
+            background-color: #333; /* Darker background color for header */
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 50px;
+            margin-left: 60px;
+        }
+        .header h2 {
+            font-size: 45px;
+            background: linear-gradient(to right, #30CFD0, #330867);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: font-size 0.5s ease-in-out;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .description h5 {
+            font-size: 25px;
+            font-weight: bold;
+            color: #330867;
+            margin-bottom: 10px;
+            
+        }
+        .description p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #444; /* Slightly darker text color */
+            margin-right:15px;
+        }
+        .images {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+        }
+        img {
+            width: 75%;
+            max-width: 195px;
+            margin-left: 34px;
+            border-radius: 15px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            transition: transform 0.5s;
+            border: 0.2px solid #30CFD0;
+            position: relative;
+        }
+        .rollno {
+            writing-mode: vertical-rl;
+            position: relative;
+            top: -200px;
+            left: 200px;
+            font-family: 'PT Serif', serif;
+            font-weight: 400;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: #330867;
+        }
+        .photo {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .info-container {
+            position: absolute;
+            bottom: -1px;
+            left: 22px;
+            width: 90%;
+            height: 94%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.77), black);
+            color: white;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 25px;
+            transform: translateY(100%);
+            pointer-events: none;
+            border: 0.2px solid #30CFD0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        
+        .photo:hover .info-container {
+            opacity: 1;
+            bottom: 12px;
+        }
+        
+        .photo:hover img, .image-description p {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .photo:not(:hover) img, .photo:not(:hover) .image-description p {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .info {
+            margin: 0;
+            font-size: 14px;
+        }
+        .name {
+            position: relative;
+            top: -90px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 19.5px;
+            font-weight: 700;
+            text-align: left;
+            padding-left: 60px;
+            color: #30CFD0;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            color: #A9A9A9;
+            margin-top: 50px;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin-top: 20px;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .description h5 {
+                margin-top: 10px;
+            }
+            .images {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 0;
+                margin-top: 50px;
+            }
+            img {
+                margin-left: 30px;
+            }
+            .rollno {
+                top: auto;
+                left: auto;
+            }
+        }
+        @media only screen and (min-width: 700px) {
+            .description p {
+                line-height: 24px;
+            }
+            .header h2{
+                margin-left:85px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 0.8em;
+            }
+            .description p {
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+        /* Morph effect */
+        .header h2:hover {
+            font-size: 50px;
+        }
+        .info-container.swipe-up {
+            transform: translateY(0%);
+        }
+        .info {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 22px;
+            font-weight: 400;
+            color: white;
+        }
+        @media only screen and (max-width: 600px) {
+    .container {
+        margin-top: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .rollno{
+        position:relative;
+        right:-140px;
+        bottom:175px;
+    }
+    .name{
+        margin-left:-50px;
+    }
+    .info-container{
+        margin-left:-20px;
+    }
+    .description h5 {
+        margin-top: 10px;
+    }
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .photo {
+        margin-bottom: 20px; /* Adjust spacing between photos */
+    }
+    img {
+        margin-left: 0; /* Reset margin for images */
+    }
+    .rollno {
+        top: auto;
+        left: auto;
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<header>
+    <h1>CoinForge Team</h1>
+</header>
+
+<div class="container">
+    <div class="header">
+        <h2 style="margin-bottom:-45px;">Meet</h2>
+        <h2><span class="effect"></span></h2>
+    </div>
+    <div class="description">
+        <h5>WHO WE ARE</h5>
+        <p>We are your reliable companion for all your currency conversion needs.</p>
+        <p>At CoinForge Team, we understand that in today’s global economy, dealing with different currencies is a common occurrence. Whether you’re traveling, investing in foreign markets, or simply shopping online, we’re here to make currency conversion as simple and seamless as possible.</p>
+    </div>
+</div>
+<script>
+    var typed = new Typed(".effect",{
+        strings: ["Our Team","  "],
+        typeSpeed: 70,
+        backSpeed: 70,
+        loop:true,
+    })
+
+</script>
+<section class="images">
+    <div class="photo">
+        <div class="info-container">
+            <p class="info">Passionate about UX design and making currency conversion seamless for users. Connect with me!</p>
+        </div>
+        <div class="image-description">
+            <img src="team_member1.jpeg" />
+            <div class="rollno">
+                <p>23109909207</p>
+            </div>
+            <p class="name">Anvesha Jagga</p>
+        </div>
+    </div>
+
+    <div class="photo">
+        <div class="info-container">
+            <p class="info">Tech enthusiast and problem solver. Excited to bring innovative solutions to currency conversion challenges.</p>
+        </div>
+        <div class="image-description">
+            <img src="team_member2.png" />
+            <div class="rollno">
+                <p>23109909208</p>
+            </div>
+            <p class="name">Apurav Gautam</p>
+        </div>
+    </div>
+    
+    <div class="photo">
+        <div class="info-container">
+            <p class="info">Data-driven thinker with a focus on accuracy in currency conversion algorithms. Let's make numbers speak!</p>
+        </div>
+        <div class="image-description">
+            <img src="team_member3.jpeg"/>
+            <div class="rollno">
+                <p>23109909209</p>
+            </div>
+            <p class="name">Archit Kapoor</p>
+        </div>
+    </div>
+</section>
+<script>
+    document.querySelectorAll('.photo').forEach(photo => {
+    const infoContainer = photo.querySelector('.info-container');
+    let mouseLeftInfoContainer = true;
+
+    photo.addEventListener('mouseenter', () => {
+        if (mouseLeftInfoContainer) {
+            infoContainer.classList.add('swipe-up');
+            infoContainer.style.transition = 'transform 0.5s ease-in-out'; // Apply transition
+        }
+    });
+
+    photo.addEventListener('mouseleave', () => {
+        infoContainer.classList.remove('swipe-up');
+    });
+});
+</script>
+
+</body>
+</html>
