@@ -52,37 +52,198 @@
             color: #555;
             margin-bottom: 20px;
         }
+
+        form {
+            display: grid;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .form-group {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .form-group:hover {
+            transform: translateX(10px);
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 30px;
+            color: #555;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+        }
+
+        .icon:hover {
+            opacity: 0.8;
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 57px);
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            margin-left: 20px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        }
+
+        input:hover,
+        textarea:hover,
+        input:focus,
+        textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submitBtn {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .extra {
+            text-align: center;
+            color: #888;
+            margin-top: 20px;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .extra:hover {
+            color: #3498db;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            .formBox {
+                max-width: 90%; /* Adjust width for smaller screens */
+                margin: 30px auto; /* Change margin for smaller screens */
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            input,
+            textarea {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
-    <body>
-        <div class="formBox">
-            <h2>Contact Us</h2>
-            <p>You will hear from us at the earliest!</p>
-            <form id="contactForm">
-                <div class="form-group">
-                    <i class="fa fa-user icon" id="nameIcon"></i>
-                    <input type="text" placeholder="     Full Name" name="name" id="nameInput" oninput="handleInput('nameInput', 'nameIcon')">
-                </div>
-                <div class="form-group">
-                    <i class="fa fa-envelope icon" id="emailIcon"></i>
-                    <input type="email" name="mail" id="mailInput" placeholder="     Email" oninput="handleInput('mailInput', 'emailIcon')">
-                    <span class="error" id="emailError"></span>
-                </div>
-                <div class="form-group">
-                    <i class="fa-solid fa-phone icon" id="phoneIcon"></i>
-                    <input type="tel" name="phone" id="phoneInput" placeholder="     Phone" min="100000" max="9999999999"
-                        oninput="handleInput('phoneInput', 'phoneIcon')">
-                </div>
-                <div class="form-group">
-                    <textarea name="query" id="query" cols="30" rows="5"
-                        placeholder="Any comment or your query"></textarea>
-                </div>
-                <div class="submitBtn">
-                    <button type="button" onclick="showMessage()">Send</button>
-                </div>
-            </form>
-            <p class="extra">You can also contact us at 181-1711-322</p>
-        </div>
-    </body>
 
-    </html>
+<body>
+    <div class="formBox">
+        <h2>Contact Us</h2>
+        <p>You will hear from us at the earliest!</p>
+        <form id="contactForm">
+            <div class="form-group">
+                <i class="fa fa-user icon" id="nameIcon"></i>
+                <input type="text" placeholder="     Full Name" name="name" id="nameInput" oninput="handleInput('nameInput', 'nameIcon')">
+            </div>
+            <div class="form-group">
+                <i class="fa fa-envelope icon" id="emailIcon"></i>
+                <input type="email" name="mail" id="mailInput" placeholder="     Email" oninput="handleInput('mailInput', 'emailIcon')">
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <i class="fa-solid fa-phone icon" id="phoneIcon"></i>
+                <input type="tel" name="phone" id="phoneInput" placeholder="     Phone" min="100000" max="9999999999"
+                    oninput="handleInput('phoneInput', 'phoneIcon')">
+            </div>
+            <div class="form-group">
+                <textarea name="query" id="query" cols="30" rows="5"
+                    placeholder="Any comment or your query"></textarea>
+            </div>
+            <div class="submitBtn">
+                <button type="button" onclick="showMessage()">Send</button>
+            </div>
+        </form>
+        <p class="extra">You can also contact us at 181-1711-322</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        function handleInput(inputId, iconId) {
+            var inputField = document.getElementById(inputId);
+            var icon = document.getElementById(iconId);
+            icon.style.display = inputField.value ? 'none' : 'block';
+        }
+
+        function showMessage() {
+            // Get form values
+            var name = document.getElementById('nameInput').value.trim();
+            var email = document.getElementById('mailInput').value.trim();
+            var phone = document.getElementById('phoneInput').value.trim();
+            var query = document.getElementById('query').value.trim();
+
+            // Check if any field is empty
+            if (name === '' || email === '' || phone === '' || query === '') {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Please fill in all fields',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            } else {
+                // Validate email
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Invalid email address',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                    return;
+                } else {
+                    // Show success message
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Your Feedback has been received successfully!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+
+                    // Optionally, you can submit the form data to the server here if needed
+
+                    // Reset form
+                    document.getElementById('contactForm').reset();
+                    // Reset icons
+                    handleInput('nameInput', 'nameIcon');
+                    handleInput('mailInput', 'emailIcon');
+                    handleInput('phoneInput', 'phoneIcon');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
